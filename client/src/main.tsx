@@ -9,6 +9,7 @@ import MainIndex from "./pages/main/index.tsx";
 import MainHome from "./pages/main/home.tsx";
 
 // The accounts routes 
+import AccountsIndex from "./pages/accounts/index.tsx";
 import AccountsLogin from "./pages/accounts/login.tsx";
 import AccountsRegister from "./pages/accounts/register.tsx";
 
@@ -20,8 +21,9 @@ createRoot(document.getElementById("root")!).render(
                 <Route path="home" element={<MainHome />} />
             </Route>
 
-            <Route path="accounts">
-                <Route path="home" element={<MainHome />} />
+            <Route path="accounts" element={<AccountsIndex />}>
+                <Route path="login" element={<AccountsLogin />} />
+                <Route path="register" element={<AccountsRegister />} />
             </Route>
 
         </Routes>
